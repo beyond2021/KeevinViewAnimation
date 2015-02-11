@@ -12,6 +12,10 @@
 		226F32DC1A8AC1C40021E6BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 226F32DB1A8AC1C40021E6BE /* Images.xcassets */; };
 		226F32DF1A8AC1C40021E6BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226F32DD1A8AC1C40021E6BE /* LaunchScreen.xib */; };
 		226F32EB1A8AC1C40021E6BE /* KeevinViewAnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226F32EA1A8AC1C40021E6BE /* KeevinViewAnimationsTests.swift */; };
+		226F32F71A8ACFE50021E6BE /* ExampleIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226F32F61A8ACFE50021E6BE /* ExampleIViewController.swift */; };
+		226F32F91A8AD0150021E6BE /* ExampleIIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226F32F81A8AD0150021E6BE /* ExampleIIViewController.swift */; };
+		226F32FB1A8AD0420021E6BE /* ExampleIIIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226F32FA1A8AD0420021E6BE /* ExampleIIIViewController.swift */; };
+		226F32FD1A8AD07D0021E6BE /* ExampleIVTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226F32FC1A8AD07D0021E6BE /* ExampleIVTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		226F32E41A8AC1C40021E6BE /* KeevinViewAnimationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeevinViewAnimationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		226F32E91A8AC1C40021E6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		226F32EA1A8AC1C40021E6BE /* KeevinViewAnimationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeevinViewAnimationsTests.swift; sourceTree = "<group>"; };
+		226F32F61A8ACFE50021E6BE /* ExampleIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIViewController.swift; sourceTree = "<group>"; };
+		226F32F81A8AD0150021E6BE /* ExampleIIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIIViewController.swift; sourceTree = "<group>"; };
+		226F32FA1A8AD0420021E6BE /* ExampleIIIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIIIViewController.swift; sourceTree = "<group>"; };
+		226F32FC1A8AD07D0021E6BE /* ExampleIVTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIVTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,10 @@
 			children = (
 				226F32D41A8AC1C30021E6BE /* AppDelegate.swift */,
 				226F32D81A8AC1C40021E6BE /* Main.storyboard */,
+				226F32FC1A8AD07D0021E6BE /* ExampleIVTableViewController.swift */,
+				226F32FA1A8AD0420021E6BE /* ExampleIIIViewController.swift */,
+				226F32F81A8AD0150021E6BE /* ExampleIIViewController.swift */,
+				226F32F61A8ACFE50021E6BE /* ExampleIViewController.swift */,
 				226F32DB1A8AC1C40021E6BE /* Images.xcassets */,
 				226F32DD1A8AC1C40021E6BE /* LaunchScreen.xib */,
 				226F32D21A8AC1C30021E6BE /* Supporting Files */,
@@ -210,6 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				226F32D51A8AC1C30021E6BE /* AppDelegate.swift in Sources */,
+				226F32F71A8ACFE50021E6BE /* ExampleIViewController.swift in Sources */,
+				226F32F91A8AD0150021E6BE /* ExampleIIViewController.swift in Sources */,
+				226F32FD1A8AD07D0021E6BE /* ExampleIVTableViewController.swift in Sources */,
+				226F32FB1A8AD0420021E6BE /* ExampleIIIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5PD-MD-3U3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Animations Table View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="Hfv-14-D4Q">
             <objects>
-                <tableViewController id="XbM-d8-oBt" customClass="AnimationsTableViewController" customModule="KeevinViewAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XbM-d8-oBt" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OEo-Fc-79T">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1108" y="442"/>
         </scene>
-        <!--View Controller-->
+        <!--ExampleII View Controller-->
         <scene sceneID="eL5-xq-Hu4">
             <objects>
-                <viewController id="8n1-iP-6oD" sceneMemberID="viewController">
+                <viewController id="8n1-iP-6oD" customClass="ExampleIIViewController" customModule="KeevinViewAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="54K-f4-I3f"/>
                         <viewControllerLayoutGuide type="bottom" id="OwY-2v-kMZ"/>
@@ -115,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1888" y="115"/>
         </scene>
-        <!--View Controller-->
+        <!--ExampleIII View Controller-->
         <scene sceneID="e8F-y1-ehc">
             <objects>
-                <viewController id="0gU-pk-LNM" sceneMemberID="viewController">
+                <viewController id="0gU-pk-LNM" customClass="ExampleIIIViewController" customModule="KeevinViewAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NUB-0L-SZT"/>
                         <viewControllerLayoutGuide type="bottom" id="N6n-Oq-c0z"/>
@@ -133,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="1890" y="817"/>
         </scene>
-        <!--Table View Controller-->
+        <!--ExampleIV Table View Controller-->
         <scene sceneID="Pdb-eg-yAj">
             <objects>
-                <tableViewController id="Rpr-TU-cBt" sceneMemberID="viewController">
+                <tableViewController id="Rpr-TU-cBt" customClass="ExampleIVTableViewController" customModule="KeevinViewAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bG3-OD-6vO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="1892" y="1503"/>
         </scene>
-        <!--View Controller-->
+        <!--ExampleI View Controller-->
         <scene sceneID="aW9-nv-dXF">
             <objects>
-                <viewController id="PVx-QJ-Mo2" sceneMemberID="viewController">
+                <viewController id="PVx-QJ-Mo2" customClass="ExampleIViewController" customModule="KeevinViewAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SLB-Cj-jyh"/>
                         <viewControllerLayoutGuide type="bottom" id="TlJ-Uf-efy"/>
@@ -170,8 +171,52 @@
                     <view key="view" contentMode="scaleToFill" id="6k3-br-5ZK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kup-K9-7lG">
+                                <rect key="frame" x="16" y="98" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnr-sN-Skd">
+                                <rect key="frame" x="16" y="151" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsN-ch-XYm">
+                                <rect key="frame" x="150" y="231" width="300" height="57"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="fiv-hC-lci"/>
+                                    <constraint firstAttribute="width" constant="300" id="ySQ-iW-dpt"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="PVx-QJ-Mo2" eventType="touchUpInside" id="9W9-PR-Bgn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fnr-sN-Skd" firstAttribute="leading" secondItem="6k3-br-5ZK" secondAttribute="leadingMargin" id="0Lf-En-bN2"/>
+                            <constraint firstItem="fnr-sN-Skd" firstAttribute="centerX" secondItem="CsN-ch-XYm" secondAttribute="centerX" id="0SQ-ZE-vIF"/>
+                            <constraint firstItem="fnr-sN-Skd" firstAttribute="trailing" secondItem="kup-K9-7lG" secondAttribute="trailing" id="7Gd-Ox-cdr"/>
+                            <constraint firstItem="CsN-ch-XYm" firstAttribute="leading" secondItem="6k3-br-5ZK" secondAttribute="leading" constant="150" id="9D3-3U-8TZ"/>
+                            <constraint firstItem="fnr-sN-Skd" firstAttribute="leading" secondItem="kup-K9-7lG" secondAttribute="leading" id="HmB-rZ-cUo"/>
+                            <constraint firstAttribute="trailing" secondItem="CsN-ch-XYm" secondAttribute="trailing" constant="150" id="OyF-If-eCu"/>
+                            <constraint firstItem="fnr-sN-Skd" firstAttribute="top" secondItem="kup-K9-7lG" secondAttribute="bottom" constant="23" id="Paf-Xa-aBj"/>
+                            <constraint firstItem="CsN-ch-XYm" firstAttribute="top" secondItem="fnr-sN-Skd" secondAttribute="bottom" constant="50" id="Tbn-ZD-3Jq"/>
+                            <constraint firstAttribute="centerX" secondItem="CsN-ch-XYm" secondAttribute="centerX" id="mV3-fT-KKW"/>
+                            <constraint firstItem="kup-K9-7lG" firstAttribute="top" secondItem="SLB-Cj-jyh" secondAttribute="bottom" constant="34" id="vNm-pL-YRx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="centerAlignPassword" destination="0SQ-ZE-vIF" id="9CK-Vu-ZQz"/>
+                        <outlet property="centerAlignUsername" destination="mV3-fT-KKW" id="s3k-rl-Rk4"/>
+                        <outlet property="loginButton" destination="CsN-ch-XYm" id="WZc-3f-PlO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7y-kB-qsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
