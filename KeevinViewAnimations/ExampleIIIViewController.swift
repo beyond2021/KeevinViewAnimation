@@ -43,21 +43,50 @@ class ExampleIIIViewController: UIViewController {
     }
     
     func dismissAlert() {
+        /*
+        In the below, we create frames that represent what we want for the two stages of animating the view. smallFrame shrinks to half the size of alertView, maintaining the center point and finalFrame has a position at the bottom of the screen, out of view.
+        
+        We use a Keyframe animation with two keyframes. The first sets alertView’s frame to smallFrame and the second to finalFrame. The result will be that the alertView will shrink to half its size and then fall out of view. Notice I have put such a large number for the duration – 4 seconds. You can change this, I just wanted the animation running in slow-motion for the demo
+
+*/
         
         let bounds = alertView.bounds
         let smallFrame = CGRectInset(alertView.frame, alertView.frame.size.width / 4, alertView.frame.size.height / 4)
         let finalFrame = CGRectOffset(smallFrame, 0, bounds.size.height)
         
+        let snapshot = alertView.snapshotViewAfterScreenUpdates(false)
+        snapshot.frame = alertView.frame
+        view.addSubview(snapshot)
+        alertView.removeFromSuperview()
+        
+        /*
+        The animation isn’t quite what we expected. You can see the red alertView animate as expected, but the scale of its children doesn’t change. Changing the parent’s frame, doesn’t automatically change its children’s frames.
+        
+        We’ll use a feature introduced in iOS 7 called UIView snapshots to fix the animation. This allows you to take a snapshot of a UIView together with its hierarchy and render it into a new UIView.
+        */
+        
+        
+//        UIView.animateKeyframesWithDuration(4, delay: 0, options: .CalculationModeCubic, animations: {
+//            
+//            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.5) {
+//                self.alertView.frame = smallFrame
+//            }
+//            
+//            UIView.addKeyframeWithRelativeStartTime(0.5, relativeDuration: 0.5) {
+//                self.alertView.frame = finalFrame
+//            }
+//            }, completion: nil)
         UIView.animateKeyframesWithDuration(4, delay: 0, options: .CalculationModeCubic, animations: {
-            
             UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.5) {
-                self.alertView.frame = smallFrame
+                snapshot.frame = smallFrame
             }
-            
             UIView.addKeyframeWithRelativeStartTime(0.5, relativeDuration: 0.5) {
-                self.alertView.frame = finalFrame
+                snapshot.frame = finalFrame
             }
             }, completion: nil)
+        
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
