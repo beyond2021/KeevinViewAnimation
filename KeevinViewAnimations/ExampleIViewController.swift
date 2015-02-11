@@ -11,6 +11,7 @@ import UIKit
 class ExampleIViewController: UIViewController {
     
     @IBOutlet weak var centerAlignUsername: NSLayoutConstraint!
+   // @IBOutlet weak var centerAlignUsername: NSLayoutConstraint!
     @IBOutlet weak var centerAlignPassword: NSLayoutConstraint!
     //@IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -37,11 +38,26 @@ class ExampleIViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        
+//        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+//            self.centerAlignUsername.constant += self.view.bounds.width
+//            self.centerAlignPassword.constant += self.view.bounds.width
+//            self.loginButton.alpha = 1
+//            self.view.layoutIfNeeded()
+//            }, completion: nil)
+        
         UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.centerAlignUsername.constant += self.view.bounds.width
-            self.centerAlignPassword.constant += self.view.bounds.width
-            self.loginButton.alpha = 1
             self.view.layoutIfNeeded()
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.5, delay: 0.3, options: .CurveEaseOut, animations: {
+            self.centerAlignPassword.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.5, delay: 0.4, options: .CurveEaseOut, animations: {
+            self.loginButton.alpha = 1
             }, completion: nil)
         
     }

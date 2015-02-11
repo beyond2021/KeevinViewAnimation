@@ -202,8 +202,11 @@
                         <constraints>
                             <constraint firstItem="fnr-sN-Skd" firstAttribute="leading" secondItem="6k3-br-5ZK" secondAttribute="leadingMargin" id="0Lf-En-bN2"/>
                             <constraint firstItem="fnr-sN-Skd" firstAttribute="centerX" secondItem="CsN-ch-XYm" secondAttribute="centerX" id="0SQ-ZE-vIF"/>
+                            <constraint firstAttribute="centerX" secondItem="kup-K9-7lG" secondAttribute="centerX" id="0UU-bu-WZG"/>
+                            <constraint firstItem="kup-K9-7lG" firstAttribute="width" secondItem="fnr-sN-Skd" secondAttribute="width" id="663-MC-XWH"/>
                             <constraint firstItem="fnr-sN-Skd" firstAttribute="trailing" secondItem="kup-K9-7lG" secondAttribute="trailing" id="7Gd-Ox-cdr"/>
                             <constraint firstItem="CsN-ch-XYm" firstAttribute="leading" secondItem="6k3-br-5ZK" secondAttribute="leading" constant="150" id="9D3-3U-8TZ"/>
+                            <constraint firstItem="fnr-sN-Skd" firstAttribute="top" secondItem="kup-K9-7lG" secondAttribute="bottom" constant="23" id="9yN-Gb-89T"/>
                             <constraint firstItem="fnr-sN-Skd" firstAttribute="leading" secondItem="kup-K9-7lG" secondAttribute="leading" id="HmB-rZ-cUo"/>
                             <constraint firstAttribute="trailing" secondItem="CsN-ch-XYm" secondAttribute="trailing" constant="150" id="OyF-If-eCu"/>
                             <constraint firstItem="fnr-sN-Skd" firstAttribute="top" secondItem="kup-K9-7lG" secondAttribute="bottom" constant="23" id="Paf-Xa-aBj"/>
@@ -211,10 +214,17 @@
                             <constraint firstAttribute="centerX" secondItem="CsN-ch-XYm" secondAttribute="centerX" id="mV3-fT-KKW"/>
                             <constraint firstItem="kup-K9-7lG" firstAttribute="top" secondItem="SLB-Cj-jyh" secondAttribute="bottom" constant="34" id="vNm-pL-YRx"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7Gd-Ox-cdr"/>
+                                <exclude reference="HmB-rZ-cUo"/>
+                                <exclude reference="Paf-Xa-aBj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="centerAlignPassword" destination="0SQ-ZE-vIF" id="9CK-Vu-ZQz"/>
-                        <outlet property="centerAlignUsername" destination="mV3-fT-KKW" id="s3k-rl-Rk4"/>
+                        <outlet property="centerAlignUsername" destination="0UU-bu-WZG" id="kQO-Bz-M7g"/>
                         <outlet property="loginButton" destination="CsN-ch-XYm" id="WZc-3f-PlO"/>
                     </connections>
                 </viewController>
